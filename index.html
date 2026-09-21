@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>🌸✨ Feliz Día de las Flores Amarillas — Hermione ✨🌸</title>
+<link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@500;700&family=Press+Start+2P&display=swap" rel="stylesheet">
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  
+  body {
+    background: radial-gradient(circle at center, #2d1b36 0%, #150d1a 100%);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Comfortaa', cursive, sans-serif;
+    overflow-x: hidden;
+    color: #fff;
+  }
+
+  /* Elementos flotantes estilo anime (Flores y Estrellas) */
+  .anime-float {
+    position: fixed;
+    font-size: 24px;
+    opacity: 0.6;
+    animation: floatAnime 6s ease-in-out infinite alternate;
+    z-index: 0;
+    filter: drop-shadow(0 0 8px rgba(255, 223, 89, 0.8));
+  }
+  .anime-float:nth-child(1){ top:8%; left:8%; animation-delay:0s; }
+  .anime-float:nth-child(2){ top:18%; left:82%; animation-delay:1s; }
+  .anime-float:nth-child(3){ top:68%; left:10%; animation-delay:2s; }
+  .anime-float:nth-child(4){ top:78%; left:85%; animation-delay:3s; }
+  .anime-float:nth-child(5){ top:38%; left:88%; animation-delay:1.5s; }
+  .anime-float:nth-child(6){ top:88%; left:48%; animation-delay:2.5s; }
+  .anime-float:nth-child(7){ top:22%; left:28%; animation-delay:.5s; }
+  .anime-float:nth-child(8){ top:58%; left:5%; animation-delay:3.5s; }
+
+  @keyframes floatAnime {
+    0% { transform: translateY(0px) rotate(0deg) scale(1); }
+    100% { transform: translateY(-20px) rotate(15deg) scale(1.15); }
+  }
+
+  /* Tarjeta estilo Anime / Cyber-Kawaii */
+  .card {
+    background: rgba(30, 20, 40, 0.88);
+    backdrop-filter: blur(10px);
+    border-radius: 24px;
+    padding: 35px 30px;
+    max-width: 650px;
+    width: 90%;
+    box-shadow: 0 0 25px rgba(255, 215, 0, 0.35), 0 0 10px rgba(255, 105, 180, 0.3);
+    border: 3px solid #ffe600;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+    animation: animePop 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  }
+
+  @keyframes animePop {
+    from { transform: scale(0.8) translateY(30px); opacity: 0; }
+    to { transform: scale(1) translateY(0); opacity: 1; }
+  }
+
+  h1 {
+    color: #fff263;
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    text-shadow: 0 0 12px rgba(255, 242, 99, 0.8), 0 0 5px #ff69b4;
+    font-weight: 700;
+  }
+
+  p {
+    color: #e2d5f8;
+    font-size: 1.05rem;
+    line-height: 1.8;
+    margin-bottom: 18px;
+    text-align: left;
+  }
+
+  p.center { text-align: center; }
+
+  /* Estilos para las fotos con marco Kawaii */
+  .photo-frame {
+    margin: 18px auto;
+    max-width: 100%;
+    border-radius: 18px;
+    overflow: hidden;
+    border: 3px solid #ffb703;
+    box-shadow: 0 0 18px rgba(255, 183, 3, 0.5), inset 0 0 10px rgba(255, 105, 180, 0.3);
+    position: relative;
+    background: #11081a;
+  }
+
+  .photo-frame img {
+    width: 100%;
+    max-height: 290px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.4s ease;
+  }
+
+  .photo-frame img:hover {
+    transform: scale(1.04);
+  }
+
+  /* Botones estilo Anime Gamer / Cyber */
+  .btn {
+    background: linear-gradient(135deg, #ffe600, #ffb703);
+    color: #1a002c;
+    border: none;
+    padding: 14px 38px;
+    font-size: 1.05rem;
+    font-weight: 700;
+    border-radius: 50px;
+    cursor: pointer;
+    margin-top: 10px;
+    box-shadow: 0 0 15px rgba(255, 230, 0, 0.6);
+    transition: all 0.3s ease;
+    font-family: 'Comfortaa', cursive, sans-serif;
+  }
+
+  .btn:hover {
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 0 25px rgba(255, 230, 0, 0.9);
+    background: linear-gradient(135deg, #fff263, #ffa200);
+  }
+
+  .btn-green {
+    background: linear-gradient(135deg, #00f5d4, #00bbf9);
+    color: #03001e;
+    border: none;
+    padding: 14px 38px;
+    font-size: 1.05rem;
+    font-weight: 700;
+    border-radius: 50px;
+    cursor: pointer;
+    margin-top: 10px;
+    box-shadow: 0 0 15px rgba(0, 245, 212, 0.6);
+    transition: all 0.3s ease;
+    font-family: 'Comfortaa', cursive, sans-serif;
+  }
+
+  .btn-green:hover {
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 0 25px rgba(0, 245, 212, 0.9);
+  }
+
+  .hidden { display: none; }
+  .screen { display: block; }
+
+  /* Estilo Terminal Anime / Hacker */
+  .terminal-box {
+    background: #0d0714;
+    border: 2px solid #00f5d4;
+    border-radius: 12px;
+    padding: 12px;
+    box-shadow: 0 0 12px rgba(0, 245, 212, 0.4);
+    margin-top: 10px;
+  }
+
+  .mono {
+    font-family: 'Press Start 2P', monospace;
+    color: #00f5d4;
+    font-size: 0.75rem;
+    line-height: 1.6;
+    text-shadow: 0 0 5px #00f5d4;
+  }
+
+  .fade { animation: animePop 0.6s ease; }
+</style>
+</head>
+<body>
+
+<!-- Elementos flotantes de decoración anime -->
+<div class="anime-float">🌻</div><div class="anime-float">✨</div>
+<div class="anime-float">🌸</div><div class="anime-float">🌻</div>
+<div class="anime-float">⭐</div><div class="anime-float">🌼</div>
+<div class="anime-float">✨</div><div class="anime-float">🌻</div>
+
+<!-- PANTALLA 1 -->
+<div class="card screen" id="s1">
+  <h1>✨ 🌻 Feliz Día de las Flores Amarillas 🌻 ✨</h1>
+  <p class="center mono" style="color:#ff9e00; margin-bottom:25px;">> [DESTINATARIO]: Hermione_</p>
+  <button class="btn" onclick="goNext('s2')">Ingresar ✨ ➡️</button>
+</div>
+
+<!-- PANTALLA 2 -->
+<div class="card hidden" id="s2">
+  <h1>🌼 Hermione ✨</h1>
+  <p>aunque no hablemos, hemos hablado mucho. me ha agradado que me hayas contado algunas cosas, en las que hayas confiado en mí. 🌻</p>
+  
+  <div class="photo-frame">
+    <img src="WhatsApp Image 2026-09-21 at 04.06.53.jpg" alt="Foto Navideña 1">
+  </div>
+
+  <p>también quería dedicarte esta pequeña weed, solo para ti, porque eres mi amiga. no puedo decir mucho más. 💛</p>
+  <button class="btn" onclick="goNext('s3')">Siguiente ➡️</button>
+</div>
+
+<!-- PANTALLA 3 -->
+<div class="card hidden" id="s3">
+  <h1>💻 cuídate (UwU)</h1>
+  <p>si necesitas algo informático o ciber seguridad, me avisas. para ayudar a hackear, explotar, no sé… cualquier wea. pero háblame uwu. 🖥️✨</p>
+  
+  <div class="photo-frame">
+    <img src="WhatsApp Image 2026-09-21 at 04.06.54.jpg" alt="Foto Navideña 2">
+  </div>
+
+  <div class="terminal-box">
+    <p class="mono">$ sudo ./flores_amarillas --para Hermione</p>
+  </div>
+  <button class="btn" onclick="goNext('s4')">Siguiente ➡️</button>
+</div>
+
+<!-- PANTALLA 4 -->
+<div class="card hidden" id="s4">
+  <h1>🌿 tu weed ✨</h1>
+  <div class="photo-frame" style="max-width:320px;">
+    <img src="WhatsApp Image 2026-09-21 at 04.06.52.jpg" alt="Foto Niño Feliz">
+  </div>
+  <p class="center">disfrútala esta weed. 🌼✨</p>
+  <button class="btn-green" onclick="goNext('s5')">Último paso ➡️</button>
+</div>
+
+<!-- PANTALLA 5 -->
+<div class="card hidden" id="s5">
+  <h1>🌻 FELIZ DÍA DE LAS FLORES AMARILLAS!! 🌻</h1>
+  <p class="center" style="font-size:1.15rem; color:#fff263; margin-top:15px;">
+    aunque no podré darte unas flores verdaderas…<br>
+    pero esto es todo lo que tengo, porque ando pobre. 😅💛
+  </p>
+  <p class="center mono" style="color:#00f5d4; margin-top:25px;">— con cariño, tu amigo Stefano (UwU)</p>
+</div>
+
+<script>
+  function goNext(id){
+    var cards = document.querySelectorAll('.card');
+    cards.forEach(function(c){ c.classList.add('hidden'); });
+    var next = document.getElementById(id);
+    next.classList.remove('hidden');
+    next.classList.add('fade');
+  }
+</script>
+</body>
+</html>
